@@ -35,4 +35,4 @@ App.listen(PORT, () => {
     console.log(`API started at http://localhost:${PORT}`);
 });
 
-mongoose.connect(process.env.MONGO)
+mongoose.connect(process.env.MONGO|| 'mongodb+srv://appalasaisumanth:Samy%40samy123@cluster0.3tbj05s.mongodb.net/fulltoss')
