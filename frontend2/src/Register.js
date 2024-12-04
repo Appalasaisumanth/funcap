@@ -96,6 +96,28 @@ function Register() {
     setMessage("input all feilds");
    }
   };
+
+  const visibleHandler1=()=>{
+  
+    document.getElementById('password2').type='text';
+    
+   
+    setTimeout(()=>{
+      
+    document.getElementById('password2').type='password';
+    
+    },500);
+    
+  }
+  const visibleHandler2=()=>{
+  
+    document.getElementById('repass').type='text';
+    setTimeout(()=>{
+    document.getElementById('repass').type='password';
+    
+    },500);
+    
+  }
   return (
     <div className="Login" style={{ backgroundImage: "url('/part2.jpg')", width: "100vw", height: "100vh" }}>
        {isLoading ? (
@@ -127,13 +149,15 @@ function Register() {
   <input type="text" id="email" name="email" placeholder=" "onChange={handleChange}  value={formData.email} />
   <label for="email">e-mail</label>
 </div>
-<div class="g-input">
+<div class="g-input" style={{display:'flex'}}>
   <input type="password" id="password2" name="password" placeholder=" "  onChange={handleChange}  value={formData.password} />
   <label for="password2">Password</label>
+  <img height={40} width={50} src='/closed_eye.png' onClick={visibleHandler1} alt='closed-eye'/>
 </div>
-<div class="g-input">
+<div class="g-input" style={{display:'flex'}}>
   <input type="password" id="repass" name="repass" placeholder=" "  onChange={handleChange}  value={formData.repass} />
   <label for="password2">Re-enter Password</label>
+  <img height={40} width={50} src='/closed_eye.png' onClick={visibleHandler2} alt='closed-eye'/>
 </div>
 <button className="button-navig" onClick={submitHandler} >Submit</button>
           </div>

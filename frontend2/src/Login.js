@@ -10,6 +10,7 @@ function Login() {
   const [formData, setFormData] = useState({ username: "", password: "" });
   const [message, setMessage] = useState("");
   const [isLoading,setIsloading]=useState(false);
+  const [visible,setIsvisible]=useState(false);
   
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -66,6 +67,20 @@ function Login() {
     setMessage("input all feilds");
    }
   };
+  var image='/closed_eye.png';
+  const visibleHandler=()=>{
+  
+    document.getElementById('password2').type='text';
+    setIsvisible(!(visible));
+   
+    setTimeout(()=>{
+      
+    document.getElementById('password2').type='password';
+    setIsvisible(!(visible));
+    },500);
+    
+  }
+
   return (
     <div className="Login" >
       <div className="main2">
@@ -81,9 +96,11 @@ function Login() {
                 onChange={handleChange} placeholder=" " />
             <label for="user-name2">Username</label>
           </div>
-          <div class="g-input">
+          <div class="g-input" style={{display:'flex'}}>
             <input type="password" id="password2" name="password"    value={formData.password}   onChange={handleChange} placeholder=" " />
             <label for="password2">Password</label>
+            <img height={40} width={50} src='/closed_eye.png' onClick={visibleHandler} alt='closed-eye'/>
+        
           </div>
           <div style={{ marginBottom:"10px"}}>
             <a href="/" style={{color:"black",marginLeft:"100px"}}>forgot password</a>
