@@ -1,0 +1,140 @@
+.Login
+{
+   height: 100vh;
+   width:100vw;
+   background: url("../public/part1.jpg");
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   align-items: center;
+   vertical-align: middle;
+   font-size: larger;
+   
+}
+
+.main,.main-r{
+   
+   
+    width: min(400px,45vw);
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    border-radius: 5px;
+    backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    text-align: center;
+ 
+    transition: ease-in 5ms;
+    font-size: larger;
+    text-transform: capitalize;
+
+} 
+.main2
+{
+    padding-top: 20vh;
+}
+.main
+{
+    margin-left:10vw ;
+}
+.main-r
+{
+ 
+    margin-left:50vw;
+    
+    
+}
+.back{
+    position: fixed; /* Ensures the element stays at the same spot in the viewport */
+  top: 10px; /* Position from the top */
+  right: 10px; /* Position from the right */
+  font-size: 30px;
+  font-weight: 2000;
+  background: none;
+  border-radius: 50%;
+  border: 2px solid red;
+}
+.button-navig
+{
+   
+    font-size: 30px;
+    font-weight: 2000;
+    background: none;
+    color: bisque;
+    background-color:rgb(57, 105, 111);
+    border-radius: 15px;
+}
+.text1
+{display:flex;
+    flex-direction: row;
+}
+.text1>div{
+    margin-right: 10px;
+}
+.button-navig:hover
+{
+   
+    border-color: brown;
+    border-width: 3px;
+}
+.g-input {
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    width:min(300px,100%);
+    align-items: center;
+    align-self: center;
+    margin-left: 2vh;
+  
+  }
+  
+  .g-input label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background:none;
+    padding: 0 5px;
+    font-size: 18px;
+    color: #070000;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .g-input input,
+  .g-input textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    box-sizing: border-box;
+    background:none;
+  }
+  
+  .g-input input:focus,
+  .g-input textarea:focus {
+    border-color: #0037ff;
+    border-width: 3px;
+  }
+  
+  .g-input input:focus + label,
+  .g-input input:not(:placeholder-shown) + label{
+    top: -10px;
+    left: 5px;
+    font-size: 12px;
+    color: #000000;
+    background-color: #ccc;
+  }
+  
+  .g-input input::placeholder,
+  .g-input textarea::placeholder {
+    opacity: 0; /* Hides the placeholder text */
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .g-input input:focus::placeholder,
+  .g-input textarea:focus::placeholder {
+    opacity: 1;
+  }
+  
